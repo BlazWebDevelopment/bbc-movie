@@ -1,19 +1,32 @@
-# Kairo: The Lone Wolf — Coming Soon (BBC)
+# Meggy: The Hidden Megalodon — Coming Soon (BBC concept page)
 
-A single-page, no-scroll "Coming Soon" landing page for the upcoming BBC
-original film **Kairo: The Lone Wolf**. Built with **Next.js 14 (App
+A scrollable, BBC-styled "Coming Soon" landing page for the fictional
+documentary **Meggy: The Hidden Megalodon**. Built with **Next.js 14 (App
 Router)**, **TypeScript**, and **Tailwind CSS**.
+
+> This is a concept/mockup page. The film is fictional and the site is not
+> affiliated with or endorsed by the BBC.
+
+## Sections
+
+1. **Hero** — poster, title treatment, tagline, primary email signup
+2. **About the film** — synopsis plus a pull quote
+3. **Programme details** — genre, runtime, certificate, premiere, locations
+4. **Be the first to know** — repeated email signup band
+5. **Footer** — BBC-style link row and copyright
 
 ## Features
 
-- Cinematic single-viewport hero — no scrolling on desktop
-- Full-bleed, animated backdrop derived from the movie poster
-- Prominent official poster with soft glow + subtle motion
-- Email signup form with client + server-side validation
-  (`POST /api/notify`)
-- BBC branding in the header, BBC favicon (`app/icon.png`)
-- SEO / OpenGraph / Twitter card metadata
-- Responsive: stacks poster above copy on mobile
+- Fixed two-tier BBC masthead (global nav + programme sub-nav) with
+  smooth-scrolling anchor links
+- Deep-ocean palette (`abyss` / `deep` / `tide` / `foam`) pulled from the
+  poster artwork
+- Animated ambient backdrop: blurred poster, slow zoom, drifting light
+  shafts, and an SVG film-grain overlay
+- Email signup with client + server validation (`POST /api/notify`)
+- BBC favicon via `app/icon.png`
+- SEO / OpenGraph / Twitter metadata
+- Responsive down to mobile; honours `prefers-reduced-motion`
 
 ## Getting started
 
@@ -33,15 +46,13 @@ npm start
 
 ## Wiring up a real mailing list
 
-The `POST /api/notify` route currently validates the email and logs it
-to stdout. Replace the `console.log` in
-`app/api/notify/route.ts` with a call to your provider of choice
-(Mailchimp, SendGrid, HubSpot, Resend, etc.) and add the API key via a
-`.env.local` file.
+`POST /api/notify` validates the address and currently just logs it to
+stdout. Swap the `console.log` in `app/api/notify/route.ts` for your
+provider (Mailchimp, SendGrid, HubSpot, Resend, …) and put the API key in
+`.env.local`.
 
 ## Assets
 
-- `public/poster.png` — Kairo: The Lone Wolf official key art
-- `public/bbc-logo.png` — BBC logo (also used in the header)
-- `app/icon.png` — BBC logo, served automatically by Next.js as the
-  site favicon
+- `public/poster.png` — Meggy key art (also drives the page backdrops)
+- `public/bbc-logo.png` — BBC logo used in the header and footer
+- `app/icon.png` — BBC logo, served automatically by Next.js as the favicon

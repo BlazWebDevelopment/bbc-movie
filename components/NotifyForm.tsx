@@ -7,7 +7,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function NotifyForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState<string>("");
+  const [message, setMessage] = useState("");
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -32,7 +32,7 @@ export default function NotifyForm() {
       }
 
       setStatus("success");
-      setMessage("You're on the list. We'll let you know when Kairo arrives.");
+      setMessage("You're on the list. We'll surface as soon as Meggy does.");
       setEmail("");
     } catch {
       setStatus("error");
@@ -42,13 +42,13 @@ export default function NotifyForm() {
 
   return (
     <form onSubmit={onSubmit} className="w-full max-w-md" noValidate>
-      <div className="group relative flex items-stretch overflow-hidden rounded-full border border-white/15 bg-white/[0.04] backdrop-blur-md transition focus-within:border-white/40 focus-within:bg-white/[0.06]">
+      <div className="flex flex-col gap-2 sm:flex-row">
         <input
           type="email"
           inputMode="email"
           autoComplete="email"
           required
-          placeholder="Enter your email"
+          placeholder="your.name@email.com"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -58,17 +58,17 @@ export default function NotifyForm() {
             }
           }}
           disabled={status === "loading"}
-          className="flex-1 bg-transparent px-5 py-3.5 text-sm text-white placeholder:text-white/40 outline-none disabled:opacity-60 sm:text-base"
           aria-label="Email address"
+          className="min-w-0 flex-1 rounded-sm border border-white/20 bg-white/[0.06] px-4 py-3.5 text-sm text-white outline-none backdrop-blur-md transition placeholder:text-white/35 focus:border-foam/60 focus:bg-white/[0.09] disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="relative m-1 inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-black transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-70 sm:px-6 sm:text-sm"
+          className="inline-flex shrink-0 items-center justify-center rounded-sm bg-foam px-6 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-abyss transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-70"
         >
           {status === "loading" ? (
             <span className="inline-flex items-center gap-2">
-              <span className="h-3 w-3 animate-spin rounded-full border-2 border-black/30 border-t-black" />
+              <span className="h-3 w-3 animate-spin rounded-full border-2 border-abyss/30 border-t-abyss" />
               Sending
             </span>
           ) : (
@@ -77,16 +77,12 @@ export default function NotifyForm() {
         </button>
       </div>
 
-      <div className="mt-3 min-h-[1.25rem] text-xs sm:text-sm" aria-live="polite">
-        {status === "success" && (
-          <p className="text-emerald-300/90">{message}</p>
-        )}
-        {status === "error" && (
-          <p className="text-red-300/90">{message}</p>
-        )}
+      <div className="mt-3 min-h-[1.25rem] text-xs sm:text-[13px]" aria-live="polite">
+        {status === "success" && <p className="text-foam">{message}</p>}
+        {status === "error" && <p className="text-red-300">{message}</p>}
         {status === "idle" && (
           <p className="text-white/40">
-            We&apos;ll only email you about Kairo: The Lone Wolf. No spam.
+            One email when the premiere date is announced. Nothing else.
           </p>
         )}
       </div>
