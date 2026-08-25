@@ -82,13 +82,13 @@ export default function SiteHeader() {
       </div>
 
       {/* Programme sub-nav */}
-      <div className="border-b border-white/10 bg-deep/80 backdrop-blur-md">
+      <div className="border-b border-gold/20 bg-ember/80 backdrop-blur-md">
         <div className="mx-auto flex h-12 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a
             href="#top"
             className="font-display text-sm font-medium uppercase tracking-[0.22em] text-white"
           >
-            Meggy
+            Binance
           </a>
           <nav
             aria-label="Programme"
@@ -98,7 +98,7 @@ export default function SiteHeader() {
               <a
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-foam"
+                className="transition hover:text-gold"
               >
                 {item.label}
               </a>

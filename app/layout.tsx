@@ -16,37 +16,38 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
-  title: "Meggy: The Hidden Megalodon — Coming Soon | BBC",
+  title: "Binance: Rise of the Exchange — Coming Soon | BBC",
   description:
-    "One ocean. One mystery. No proof. Meggy: The Hidden Megalodon is a new BBC documentary investigating the deepest question in the sea. Sign up to be notified.",
+    "One market. One revolution. One empire. Binance: Rise of the Exchange is a new BBC documentary on the platform that reshaped crypto. Sign up to be notified.",
   applicationName: "BBC",
   keywords: [
-    "Meggy",
-    "The Hidden Megalodon",
-    "Megalodon",
+    "Binance",
+    "Rise of the Exchange",
+    "Crypto",
+    "Cryptocurrency",
     "BBC",
     "BBC Documentary",
-    "Natural History",
+    "Business",
     "Coming Soon",
   ],
   openGraph: {
     siteName: "BBC",
-    title: "Meggy: The Hidden Megalodon — Coming Soon | BBC",
+    title: "Binance: Rise of the Exchange — Coming Soon | BBC",
     description:
-      "A new BBC documentary. One ocean. One mystery. No proof.",
+      "A new BBC documentary. One market. One revolution. One empire.",
     images: ["/poster.png"],
     type: "video.movie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Meggy: The Hidden Megalodon — Coming Soon | BBC",
-    description: "One ocean. One mystery. No proof.",
+    title: "Binance: Rise of the Exchange — Coming Soon | BBC",
+    description: "One market. One revolution. One empire.",
     images: ["/poster.png"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050d12",
+  themeColor: "#08070a",
   width: "device-width",
   initialScale: 1,
 };
@@ -58,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={`${display.variable} ${sans.variable}`}>
-      <body className="bg-abyss font-sans text-white antialiased">
+      <body className="bg-vault font-sans text-white antialiased">
         {children}
       </body>
     </html>

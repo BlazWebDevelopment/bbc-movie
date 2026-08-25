@@ -53,9 +53,10 @@ export default function SiteFooter() {
           Copyright &copy; {new Date().getFullYear()} BBC. The BBC is not
           responsible for the content of external sites.
         </p>
-        <p className="mt-2 text-xs text-white/25">
-          Meggy: The Hidden Megalodon is a work of fiction created for this
-          concept page. Not affiliated with or endorsed by the BBC.
+        <p className="mt-2 text-xs leading-relaxed text-white/25">
+          Binance: Rise of the Exchange is a fictional programme created for
+          this design concept. This page is unofficial and is not affiliated
+          with, authorised by or endorsed by the BBC or Binance.
         </p>
       </div>
     </footer>

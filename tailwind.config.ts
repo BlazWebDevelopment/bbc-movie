@@ -9,10 +9,11 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       colors: {
-        abyss: "#050d12",
-        deep: "#0a1a22",
-        tide: "#123240",
-        foam: "#9fd6e8",
+        vault: "#08070a",
+        ember: "#14100a",
+        bronze: "#2a2114",
+        gold: "#f0b90b",
+        bullion: "#e6c877",
       },
       keyframes: {
         "fade-up": {
