@@ -1,53 +1,54 @@
 import type { Metadata, Viewport } from "next";
-import { Oswald, Inter } from "next/font/google";
+import { Baloo_2, Nunito } from "next/font/google";
 import "./globals.css";
 
-const display = Oswald({
+const display = Baloo_2({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
 });
 
-const sans = Inter({
+const sans = Nunito({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
-  title: "Binance: Rise of the Exchange — Coming Soon | BBC",
+  title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
   description:
-    "One market. One revolution. One empire. Binance: Rise of the Exchange is a new BBC documentary on the platform that reshaped crypto. Sign up to be notified.",
+    "A woolly, wonderful animated adventure that explains cryptocurrency to curious kids. Coming soon to CBBC and BBC iPlayer.",
   applicationName: "BBC",
   keywords: [
-    "Binance",
-    "Rise of the Exchange",
-    "Crypto",
-    "Cryptocurrency",
+    "The Crypto Herd",
+    "The Animated Adventure",
+    "CBBC",
     "BBC",
-    "BBC Documentary",
-    "Business",
-    "Coming Soon",
+    "Animation",
+    "Kids",
+    "Crypto for kids",
+    "Money explained",
   ],
   openGraph: {
     siteName: "BBC",
-    title: "Binance: Rise of the Exchange — Coming Soon | BBC",
+    title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
     description:
-      "A new BBC documentary. One market. One revolution. One empire.",
+      "A woolly, wonderful animated adventure that explains cryptocurrency to curious kids.",
     images: ["/poster.png"],
     type: "video.movie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Binance: Rise of the Exchange — Coming Soon | BBC",
-    description: "One market. One revolution. One empire.",
+    title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
+    description:
+      "A woolly, wonderful animated adventure that explains crypto to curious kids.",
     images: ["/poster.png"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08070a",
+  themeColor: "#5ec5f5",
   width: "device-width",
   initialScale: 1,
 };
@@ -59,7 +60,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={`${display.variable} ${sans.variable}`}>
-      <body className="bg-vault font-sans text-white antialiased">
+      <body className="bg-cream font-sans text-ink antialiased">
         {children}
       </body>
     </html>

@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --vault: #08070a;
-  --ember: #14100a;
-  --gold: #f0b90b;
+  color-scheme: light;
+  --sky: #5ec5f5;
+  --cream: #fffdf5;
+  --ink: #17395c;
 }
 
 html {
@@ -14,86 +14,80 @@ html {
 }
 
 body {
-  background: var(--vault);
-  color: #fff;
-  font-feature-settings: "ss01", "ss02";
+  background: var(--cream);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(240, 185, 11, 0.3);
+  background: #ffe680;
+  color: var(--ink);
 }
 
-/* Slim, on-theme scrollbar */
+/* Chunky, friendly scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--vault);
+  background: #e8f6ff;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(240, 185, 11, 0.22);
+  background: #5ec5f5;
   border-radius: 999px;
-  border: 3px solid var(--vault);
+  border: 3px solid #e8f6ff;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(240, 185, 11, 0.4);
+  background: #2e9fe0;
 }
 
-.grain::after {
+/* Sunny sky wash behind the hero */
+.sky-wash {
+  background: linear-gradient(
+    180deg,
+    #7dd3fb 0%,
+    #bfe9ff 45%,
+    #e8f8dd 78%,
+    #fffdf5 100%
+  );
+}
+
+/* Soft puffy clouds */
+.cloud {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  filter: blur(0.5px);
+}
+.cloud::before,
+.cloud::after {
   content: "";
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.9'/></svg>");
+  border-radius: 999px;
+  background: inherit;
+}
+.cloud::before {
+  width: 60%;
+  height: 150%;
+  left: 12%;
+  bottom: 32%;
+}
+.cloud::after {
+  width: 44%;
+  height: 120%;
+  right: 14%;
+  bottom: 28%;
 }
 
-/* Shafts of light falling through the towers */
-.rays {
-  background-image: linear-gradient(
-      104deg,
-      transparent 42%,
-      rgba(240, 185, 11, 0.07) 47%,
-      transparent 52%
-    ),
-    linear-gradient(
-      98deg,
-      transparent 60%,
-      rgba(240, 185, 11, 0.05) 66%,
-      transparent 71%
-    ),
-    linear-gradient(
-      110deg,
-      transparent 18%,
-      rgba(240, 185, 11, 0.04) 25%,
-      transparent 31%
-    );
+/* Rolling hill divider */
+.hill {
+  background: radial-gradient(120% 100% at 50% 100%, #7cc242 60%, transparent 61%);
 }
 
-/* Faint trading-grid texture */
-.grid-lines {
-  background-image: linear-gradient(
-      rgba(240, 185, 11, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(240, 185, 11, 0.05) 1px, transparent 1px);
-  background-size: 64px 64px;
-}
-
-.text-shimmer {
-  background: linear-gradient(
-    90deg,
-    rgba(230, 200, 119, 0.65) 0%,
-    rgba(255, 236, 173, 1) 45%,
-    rgba(230, 200, 119, 0.65) 90%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Dotted "sunbeam" texture */
+.confetti-dots {
+  background-image: radial-gradient(rgba(255, 199, 44, 0.35) 2px, transparent 2px);
+  background-size: 30px 30px;
 }
 
 @media (prefers-reduced-motion: reduce) {

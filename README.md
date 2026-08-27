@@ -1,34 +1,39 @@
-# Binance: Rise of the Exchange — Coming Soon (BBC concept page)
+# The Crypto Herd: The Animated Adventure — Coming Soon (CBBC concept page)
 
-A scrollable, BBC-styled "Coming Soon" landing page for a concept
-documentary, **Binance: Rise of the Exchange**. Built with **Next.js 14
-(App Router)**, **TypeScript**, and **Tailwind CSS**.
+A bright, scrollable "Coming Soon" landing page for a concept children's
+animation, **The Crypto Herd: The Animated Adventure** — a film that
+explains cryptocurrency to kids. Built with **Next.js 14 (App Router)**,
+**TypeScript**, and **Tailwind CSS**.
 
 > This is a design concept. The programme is fictional and the page is
-> unofficial — not affiliated with, authorised by or endorsed by the BBC
-> or Binance.
+> unofficial — not affiliated with, authorised by or endorsed by the BBC.
+> Nothing on it is financial advice.
 
 ## Sections
 
-1. **Hero** — poster, title treatment, tagline, primary email signup
-2. **About the film** — synopsis plus a pull quote
-3. **Programme details** — genre, runtime, certificate, premiere, locations
-4. **Be the first to know** — repeated email signup band
-5. **Footer** — BBC-style link row and copyright
+1. **Hero** — the poster front and centre, with title, tagline and a
+   "CBBC · Coming Soon" badge
+2. **The Story** — a kid-friendly synopsis
+3. **The Herd** — five character cards, one per idea the film teaches
+4. **What You'll Learn** — six takeaways, including risk and spotting scams
+5. **Programme details** — genre, age guidance, runtime, premiere, channel
+6. **Footer** — BBC-style link row, copyright and disclaimer
 
 ## Features
 
-- Fixed two-tier BBC masthead: the global bar links out to the real BBC
-  (iPlayer, Documentaries, Earth, Sounds, News, Search), the programme
+- Poster centred as the hero visual with a gentle float animation
+- Bright playground palette (`sky` / `sunshine` / `grass` / `berry` /
+  `grape` / `cream` / `ink`) sampled from the artwork
+- Rounded, chunky type (Baloo 2 + Nunito), drifting CSS clouds, dotted
+  sunbeam texture and pop-in entrance animations
+- Fixed two-tier masthead: the black BBC bar links out to the real
+  CBBC, iPlayer, Bitesize, Newsround and Games; the bright programme
   sub-nav smooth-scrolls within the page
-- Gold-on-obsidian palette (`vault` / `ember` / `bronze` / `gold` /
-  `bullion`) pulled from the poster artwork
-- Animated ambient backdrop: blurred poster, slow zoom, drifting light
-  shafts, a faint trading-grid texture, and an SVG film-grain overlay
-- Email signup with client + server validation (`POST /api/notify`)
+- No email capture — the page is purely informational
 - BBC favicon via `app/icon.png`
 - SEO / OpenGraph / Twitter metadata
-- Responsive down to mobile; honours `prefers-reduced-motion`
+- Fully static build; responsive down to mobile; honours
+  `prefers-reduced-motion`
 
 ## Getting started
 
@@ -46,15 +51,8 @@ npm run build
 npm start
 ```
 
-## Wiring up a real mailing list
-
-`POST /api/notify` validates the address and currently just logs it to
-stdout. Swap the `console.log` in `app/api/notify/route.ts` for your
-provider (Mailchimp, SendGrid, HubSpot, Resend, …) and put the API key in
-`.env.local`.
-
 ## Assets
 
-- `public/poster.png` — key art (also drives the page backdrops)
+- `public/poster.png` — key art (also the hero centrepiece)
 - `public/bbc-logo.png` — BBC logo used in the header and footer
 - `app/icon.png` — BBC logo, served automatically by Next.js as the favicon
