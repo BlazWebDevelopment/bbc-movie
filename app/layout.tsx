@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
   title: "The Great Start — Robinhood | BBC",
   description:
-    "Building access. Empowering people. Rewriting finance. The Great Start — Robinhood, a documentary event. Coming soon to BBC Two.",
+    "Building access. Empowering people. Rewriting finance. The Great Start — Robinhood, a documentary event. Coming October to BBC Two and BBC iPlayer.",
   applicationName: "BBC",
   keywords: [
     "The Great Start",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "BBC",
     title: "The Great Start — Robinhood | BBC",
     description:
-      "A documentary event. Building access. Empowering people. Rewriting finance.",
+      "A documentary event. Coming October to BBC Two and BBC iPlayer.",
     images: ["/poster.png"],
     type: "video.movie",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Great Start — Robinhood | BBC",
     description:
-      "A documentary event. Building access. Empowering people. Rewriting finance.",
+      "A documentary event. Coming October to BBC Two and BBC iPlayer.",
     images: ["/poster.png"],
   },
 };
