@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full min-h-0 max-w-6xl flex-1 flex-col items-center justify-center gap-5 px-5 py-5 sm:px-8 sm:py-6 md:flex-row md:gap-12">
+      <main className="mx-auto flex w-full min-h-0 max-w-6xl flex-1 flex-col items-center justify-center gap-3 px-5 py-4 sm:gap-5 sm:px-8 sm:py-6 md:flex-row md:gap-12">
         {/* Poster */}
         <div className="relative min-h-0 w-full flex-1 md:h-full">
           <div
@@ -72,7 +72,7 @@ export default function Home() {
           </p>
 
           <p
-            className="animate-fade-up mt-4 max-w-md text-[13px] leading-relaxed text-white/60 sm:text-sm"
+            className="animate-fade-up mt-2.5 max-w-md text-xs leading-relaxed text-white/60 sm:mt-4 sm:text-sm"
             style={{ animationDelay: "240ms" }}
           >
             Vlad Tenev set out to put a stock exchange in everyone&rsquo;s
@@ -82,7 +82,7 @@ export default function Home() {
           </p>
 
           <div
-            className="animate-fade-up mt-5 flex items-center gap-3 border-t border-white/10 pt-4"
+            className="animate-fade-up mt-3.5 flex items-center gap-3 border-t border-white/10 pt-3 sm:mt-5 sm:pt-4"
             style={{ animationDelay: "300ms" }}
           >
             <span className="animate-pulse-dot h-2 w-2 shrink-0 rounded-full bg-leaf" />
