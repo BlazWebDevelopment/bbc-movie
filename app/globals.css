@@ -3,97 +3,27 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
-  --sky: #5ec5f5;
-  --cream: #fffdf5;
-  --ink: #17395c;
+  color-scheme: dark;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
 }
 
 body {
-  background: var(--cream);
-  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #ffe680;
-  color: var(--ink);
-}
-
-/* Chunky, friendly scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-}
-::-webkit-scrollbar-track {
-  background: #e8f6ff;
-}
-::-webkit-scrollbar-thumb {
-  background: #5ec5f5;
-  border-radius: 999px;
-  border: 3px solid #e8f6ff;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2e9fe0;
-}
-
-/* Sunny sky wash behind the hero */
-.sky-wash {
-  background: linear-gradient(
-    180deg,
-    #7dd3fb 0%,
-    #bfe9ff 45%,
-    #e8f8dd 78%,
-    #fffdf5 100%
-  );
-}
-
-/* Soft puffy clouds */
-.cloud {
-  position: absolute;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  filter: blur(0.5px);
-}
-.cloud::before,
-.cloud::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  background: inherit;
-}
-.cloud::before {
-  width: 60%;
-  height: 150%;
-  left: 12%;
-  bottom: 32%;
-}
-.cloud::after {
-  width: 44%;
-  height: 120%;
-  right: 14%;
-  bottom: 28%;
-}
-
-/* Rolling hill divider */
-.hill {
-  background: radial-gradient(120% 100% at 50% 100%, #7cc242 60%, transparent 61%);
-}
-
-/* Dotted "sunbeam" texture */
-.confetti-dots {
-  background-image: radial-gradient(rgba(255, 199, 44, 0.35) 2px, transparent 2px);
-  background-size: 30px 30px;
+  background: rgba(143, 209, 79, 0.3);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {

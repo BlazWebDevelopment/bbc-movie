@@ -1,54 +1,46 @@
 import type { Metadata, Viewport } from "next";
-import { Baloo_2, Nunito } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const display = Baloo_2({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["500", "600", "700", "800"],
-});
-
-const sans = Nunito({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
-  title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
+  title: "The Great Start — Robinhood | BBC",
   description:
-    "A woolly, wonderful animated adventure that explains cryptocurrency to curious kids. Coming soon to CBBC and BBC iPlayer.",
+    "Building access. Empowering people. Rewriting finance. The Great Start — Robinhood, a documentary event. Coming soon to BBC Two.",
   applicationName: "BBC",
   keywords: [
-    "The Crypto Herd",
-    "The Animated Adventure",
-    "CBBC",
+    "The Great Start",
+    "Robinhood",
+    "Vlad Tenev",
+    "Documentary",
     "BBC",
-    "Animation",
-    "Kids",
-    "Crypto for kids",
-    "Money explained",
+    "Coming Soon",
   ],
   openGraph: {
     siteName: "BBC",
-    title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
+    title: "The Great Start — Robinhood | BBC",
     description:
-      "A woolly, wonderful animated adventure that explains cryptocurrency to curious kids.",
+      "A documentary event. Building access. Empowering people. Rewriting finance.",
     images: ["/poster.png"],
     type: "video.movie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Crypto Herd: The Animated Adventure — Coming Soon | CBBC",
+    title: "The Great Start — Robinhood | BBC",
     description:
-      "A woolly, wonderful animated adventure that explains crypto to curious kids.",
+      "A documentary event. Building access. Empowering people. Rewriting finance.",
     images: ["/poster.png"],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#5ec5f5",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -59,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className={`${display.variable} ${sans.variable}`}>
-      <body className="bg-cream font-sans text-ink antialiased">
+    <html lang="en-GB" className={sans.variable}>
+      <body className="bg-black font-sans text-white antialiased">
         {children}
       </body>
     </html>
