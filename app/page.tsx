@@ -23,7 +23,7 @@ export default function Home() {
             />
           </a>
           <span className="text-[10px] font-medium uppercase tracking-[0.24em] text-white/50 sm:text-xs">
-            BBC Two &middot; Documentary
+            BBC Two &middot; Limited Series
           </span>
         </div>
       </header>
@@ -36,8 +36,8 @@ export default function Home() {
             className="absolute left-1/2 top-1/2 h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-leaf/10 blur-3xl"
           />
           <Image
-            src="/poster.png"
-            alt="The Great Start — Robinhood: official poster"
+            src="/a9wtdGkKpz.jpg"
+            alt="The Max Extractor: official poster"
             fill
             priority
             sizes="(max-width: 768px) 90vw, 40vw"
@@ -51,34 +51,31 @@ export default function Home() {
             className="animate-fade-up text-[9px] font-medium uppercase tracking-[0.34em] text-white/45 sm:text-[10px]"
             style={{ animationDelay: "60ms" }}
           >
-            A Documentary Event
+            A New Limited Series
           </span>
 
           <h1
-            className="animate-fade-up mt-2 text-2xl font-light leading-tight tracking-tight sm:text-3xl lg:text-4xl"
+            className="animate-fade-up mt-2 text-2xl font-bold uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl"
             style={{ animationDelay: "120ms" }}
           >
-            The Great Start
-            <span className="mt-0.5 block text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl lg:text-5xl">
-              Robinhood
-            </span>
+            The Max Extractor
           </h1>
 
           <p
             className="animate-fade-up mt-3 text-[10px] font-medium uppercase tracking-[0.16em] text-leaf sm:text-xs"
             style={{ animationDelay: "180ms" }}
           >
-            Building access. Empowering people. Rewriting finance.
+            Every pump has a price.
           </p>
 
           <p
             className="animate-fade-up mt-2.5 max-w-md text-xs leading-relaxed text-white/60 sm:mt-4 sm:text-sm"
             style={{ animationDelay: "240ms" }}
           >
-            Vlad Tenev set out to put a stock exchange in everyone&rsquo;s
-            pocket. This is the story of the app that made trading free, the
-            millions of first-time investors who followed it in, and the
-            questions that arrived right behind them.
+            From basement charts and meme coins to glass towers and green
+            candles — one trader chases the next big extract until the market
+            turns. <em>The Max Extractor</em> follows the rush, the reckoning,
+            and the human cost when everyone is betting on the moon.
           </p>
 
           <div
@@ -104,7 +101,7 @@ export default function Home() {
           <p className="text-[10px] leading-relaxed text-white/30">
             &copy; {new Date().getFullYear()} BBC &middot; Concept page for a
             fictional programme. Unofficial, and not affiliated with or
-            endorsed by the BBC or Robinhood.
+            endorsed by the BBC.
           </p>
         </div>
       </footer>

@@ -10,32 +10,32 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
-  title: "The Great Start — Robinhood | BBC",
+  title: "The Max Extractor | BBC",
   description:
-    "Building access. Empowering people. Rewriting finance. The Great Start — Robinhood, a documentary event. Coming October to BBC Two and BBC iPlayer.",
+    "Every pump has a price. The Max Extractor — a new limited series on meme markets, moonshots, and the crash that follows. Coming October to BBC Two and BBC iPlayer.",
   applicationName: "BBC",
   keywords: [
-    "The Great Start",
-    "Robinhood",
-    "Vlad Tenev",
+    "The Max Extractor",
     "Documentary",
+    "Trading",
+    "Cryptocurrency",
     "BBC",
     "Coming Soon",
   ],
   openGraph: {
     siteName: "BBC",
-    title: "The Great Start — Robinhood | BBC",
+    title: "The Max Extractor | BBC",
     description:
-      "A documentary event. Coming October to BBC Two and BBC iPlayer.",
-    images: ["/poster.png"],
+      "Every pump has a price. A new limited series. Coming October to BBC Two and BBC iPlayer.",
+    images: ["/a9wtdGkKpz.jpg"],
     type: "video.movie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Great Start — Robinhood | BBC",
+    title: "The Max Extractor | BBC",
     description:
-      "A documentary event. Coming October to BBC Two and BBC iPlayer.",
-    images: ["/poster.png"],
+      "Every pump has a price. A new limited series. Coming October to BBC Two and BBC iPlayer.",
+    images: ["/a9wtdGkKpz.jpg"],
   },
 };
 
