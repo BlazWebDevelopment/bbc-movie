@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex h-[100svh] flex-col overflow-hidden bg-black">
-      {/* BBC masthead */}
       <header className="shrink-0 border-b border-white/10">
         <div className="mx-auto flex h-12 max-w-6xl items-center justify-between px-5 sm:h-14 sm:px-8">
           <a
@@ -23,79 +22,43 @@ export default function Home() {
             />
           </a>
           <span className="text-[10px] font-medium uppercase tracking-[0.24em] text-white/50 sm:text-xs">
-            BBC Two &middot; Limited Series
+            BBC Earth &middot; Wildlife
           </span>
         </div>
       </header>
 
-      <main className="mx-auto flex w-full min-h-0 max-w-6xl flex-1 flex-col items-center justify-center gap-3 px-5 py-4 sm:gap-5 sm:px-8 sm:py-6 md:flex-row md:gap-12">
-        {/* Poster */}
-        <div className="relative min-h-0 w-full flex-1 md:h-full">
+      <main className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 px-5 py-5 sm:gap-5 sm:px-8 sm:py-6">
+        <h1 className="sr-only">
+          Darko: The Unlikely Hippo. BBC wildlife documentary. Coming 23
+          October 2026.
+        </h1>
+
+        <div className="relative min-h-0 w-full max-w-sm flex-1 sm:max-w-md">
           <div
             aria-hidden
-            className="absolute left-1/2 top-1/2 h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-leaf/10 blur-3xl"
+            className="absolute left-1/2 top-1/2 h-2/3 w-2/3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-clay/10 blur-3xl"
           />
           <Image
-            src="/a9wtdGkKpz.jpg"
-            alt="The Max Extractor: official poster"
+            src="/poster.png"
+            alt="Darko: The Unlikely Hippo — official documentary poster"
             fill
             priority
-            sizes="(max-width: 768px) 90vw, 40vw"
-            className="animate-fade-up object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.9)]"
+            sizes="(max-width: 640px) 88vw, 448px"
+            className="animate-fade-up object-contain drop-shadow-[0_24px_70px_rgba(0,0,0,0.85)]"
           />
         </div>
 
-        {/* Title, description, release */}
-        <div className="flex w-full shrink-0 flex-col items-center text-center md:max-w-md md:flex-1 md:items-start md:text-left">
-          <span
-            className="animate-fade-up text-[9px] font-medium uppercase tracking-[0.34em] text-white/45 sm:text-[10px]"
-            style={{ animationDelay: "60ms" }}
-          >
-            A New Limited Series
+        <p className="flex shrink-0 flex-col items-center gap-1 text-center">
+          <span className="flex items-center gap-2.5 text-[10px] font-medium uppercase tracking-[0.28em] text-white/55 sm:text-xs">
+            <span className="h-1.5 w-1.5 rounded-full bg-clay" />
+            Coming 23 October 2026
           </span>
-
-          <h1
-            className="animate-fade-up mt-2 text-2xl font-bold uppercase leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl"
-            style={{ animationDelay: "120ms" }}
-          >
-            The Max Extractor
-          </h1>
-
-          <p
-            className="animate-fade-up mt-3 text-[10px] font-medium uppercase tracking-[0.16em] text-leaf sm:text-xs"
-            style={{ animationDelay: "180ms" }}
-          >
-            Every pump has a price.
-          </p>
-
-          <p
-            className="animate-fade-up mt-2.5 max-w-md text-xs leading-relaxed text-white/60 sm:mt-4 sm:text-sm"
-            style={{ animationDelay: "240ms" }}
-          >
-            From basement charts and meme coins to glass towers and green
-            candles — one trader chases the next big extract until the market
-            turns. <em>The Max Extractor</em> follows the rush, the reckoning,
-            and the human cost when everyone is betting on the moon.
-          </p>
-
-          <div
-            className="animate-fade-up mt-3.5 flex items-center gap-3 border-t border-white/10 pt-3 sm:mt-5 sm:pt-4"
-            style={{ animationDelay: "300ms" }}
-          >
-            <span className="animate-pulse-dot h-2 w-2 shrink-0 rounded-full bg-leaf" />
-            <div className="text-left">
-              <p className="text-base font-semibold leading-tight text-white sm:text-lg">
-                Coming October
-              </p>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/45">
-                BBC Two &amp; BBC iPlayer
-              </p>
-            </div>
-          </div>
-        </div>
+          <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">
+            BBC Two &amp; BBC iPlayer
+          </span>
+        </p>
       </main>
 
-      {/* Footer */}
       <footer className="shrink-0 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-5 py-3 text-center sm:px-8">
           <p className="text-[10px] leading-relaxed text-white/30">

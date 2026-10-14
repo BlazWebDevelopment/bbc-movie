@@ -5,37 +5,34 @@ import "./globals.css";
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bbc.co.uk"),
-  title: "The Max Extractor | BBC",
+  title: "Darko: The Unlikely Hippo | BBC Earth",
   description:
-    "Every pump has a price. The Max Extractor — a new limited series on meme markets, moonshots, and the crash that follows. Coming October to BBC Two and BBC iPlayer.",
+    "Some heroes come in small packages. Darko: The Unlikely Hippo — a BBC wildlife documentary. Coming 23 October 2026.",
   applicationName: "BBC",
   keywords: [
-    "The Max Extractor",
-    "Documentary",
-    "Trading",
-    "Cryptocurrency",
-    "BBC",
-    "Coming Soon",
+    "Darko",
+    "The Unlikely Hippo",
+    "Pygmy hippo",
+    "BBC Earth",
+    "Wildlife documentary",
   ],
   openGraph: {
     siteName: "BBC",
-    title: "The Max Extractor | BBC",
-    description:
-      "Every pump has a price. A new limited series. Coming October to BBC Two and BBC iPlayer.",
-    images: ["/a9wtdGkKpz.jpg"],
+    title: "Darko: The Unlikely Hippo | BBC Earth",
+    description: "Coming 23 October 2026 on BBC Two and BBC iPlayer.",
+    images: ["/poster.png"],
     type: "video.movie",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Max Extractor | BBC",
-    description:
-      "Every pump has a price. A new limited series. Coming October to BBC Two and BBC iPlayer.",
-    images: ["/a9wtdGkKpz.jpg"],
+    title: "Darko: The Unlikely Hippo | BBC Earth",
+    description: "Coming 23 October 2026.",
+    images: ["/poster.png"],
   },
 };
 

@@ -20,7 +20,7 @@ body {
 }
 
 ::selection {
-  background: rgba(143, 209, 79, 0.3);
+  background: rgba(201, 166, 107, 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {
